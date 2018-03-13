@@ -1,0 +1,29 @@
+function solve(input) {
+    let x = 0, y = 0;
+    let x1 = input[0], y1 = input[1];
+    let x2 = input[2], y2 = input[3];
+
+    let dist1 = Math.sqrt(Math.pow(x - x1, 2) + Math.pow(y - y1, 2));
+    let dist2 = Math.sqrt(Math.pow(x - x2, 2) + Math.pow(y - y2, 2));
+    let dist3 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+    if (Number.isInteger(dist1)){
+        console.log(`{${x1}, ${y1}} to {0, 0} is valid`);
+    } else {
+        console.log(`{${x1}, ${y1}} to {0, 0} is invalid`);
+    }
+
+    if (Number.isInteger(dist2)){
+        console.log(`{${x2}, ${y2}} to {0, 0} is valid`);
+    } else {
+        console.log(`{${x2}, ${y2}} to {0, 0} is invalid`);
+    }
+
+    if (Number.isInteger(dist3)){
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is valid`);
+    } else {
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is invalid`);
+    }
+}
+
+solve([3, 0, 0, 4]);
